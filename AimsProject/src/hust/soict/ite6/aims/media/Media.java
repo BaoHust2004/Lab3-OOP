@@ -8,39 +8,29 @@ public abstract class Media {
 	private String category;
 	private float cost;
 	
-	
+	// Getter method
 	public int getId() {
 		return id;
-	}
-	
-	public void setId(int id) {
-		this.id = id;
 	}
 	
 	public String getTitle() {
 		return title;
 	}
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
 	public String getCategory() {
 		return category;
-	}
-
-	public void setCategory(String category) {
-		this.category = category;
 	}
 
 	public float getCost() {
 		return cost;
 	}
 
-	public void setCost(float cost) {
-		this.cost = cost;
-	}
-
+	// Setter method
+	public void setTitle(String title) {
+        this.title = title;
+    }
+	
+	// Constructor
 	public Media(String title) {
         this.title = title;
 		this.id = ++nbMedia;
@@ -62,5 +52,15 @@ public abstract class Media {
     public boolean isMatch(String title) {
         return this.getTitle().toLowerCase().contains(title.toLowerCase());
     }
-
+    
+    @Override
+    public boolean equals(Object obj) {
+    	if (obj == this) {
+    		return true;
+    	}
+    	if (!(obj instanceof Media)) {
+    		return false;
+    	}
+    	return ((Media)obj).getTitle() == this.getTitle();
+    }
 }
