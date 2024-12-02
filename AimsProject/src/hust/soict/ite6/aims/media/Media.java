@@ -1,4 +1,5 @@
-package hust.soict.hedspi.aims.media;
+package hust.soict.ite6.aims.media;
+
 public abstract class Media {
 	
 	private static int nbMedia = 0;
@@ -19,21 +20,27 @@ public abstract class Media {
 	public String getTitle() {
 		return title;
 	}
+
 	public void setTitle(String title) {
 		this.title = title;
 	}
+
 	public String getCategory() {
 		return category;
 	}
+
 	public void setCategory(String category) {
 		this.category = category;
 	}
+
 	public float getCost() {
 		return cost;
 	}
+
 	public void setCost(float cost) {
 		this.cost = cost;
 	}
+
 	public Media(String title) {
         this.title = title;
 		this.id = ++nbMedia;
@@ -51,4 +58,9 @@ public abstract class Media {
         this.cost = cost;
         this.id = ++nbMedia;
     }
+    
+    public boolean isMatch(String title) {
+        return this.getTitle().toLowerCase().contains(title.toLowerCase());
+    }
+
 }
