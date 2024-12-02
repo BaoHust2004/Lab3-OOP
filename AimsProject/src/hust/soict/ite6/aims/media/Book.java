@@ -18,13 +18,12 @@ public class Book extends Media {
 		super(title);
 	}
 	
+	public Book(String title, String category) {
+		super(title, category);
+	}
 	
 	public Book(String title, String category, float cost) {
 		super(title, category, cost);
-	}
-
-    public Book(String title, String category) {
-		super(title, category);
 	}
 	
 	public void addAuthor(String authorName) {
@@ -44,5 +43,11 @@ public class Book extends Media {
 			System.out.println("No author has been found to remove!");
 		}
 	}
-
+	
+	@Override
+	public String toString() {
+		return "Book: " + this.getTitle() + 
+				" - Category: " + this.getCategory() + 
+				" - Cost: " + this.getCost() + "$";
+	}
 }
