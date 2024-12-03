@@ -1,0 +1,13 @@
+-Alternatively, to compare items in the cart, instead of using Comparator, we can use the Comparable interface and override the compareTo() method. You can refer to the Java docs to see the information of this interface.
+-What class should implement the Comparable interface?
+The Media class should implement the Comparable interface.
+
+-In those classes, how should you implement the compareTo() method to reflect the ordering that we want?
+The implementation of the compareTo() method can be found in the src/hust/socit/hedspi/aims/Media.java file.
+
+-Can we have two ordering rules for the items (e.g., by title then cost, and by cost then title) if we use this Comparable interface approach?
+No, we cannot. The Comparable interface supports only one natural ordering for the objects being compared.
+
+-Suppose the DVDs have a different ordering rule from other media types (by title, then decreasing length, then cost). How would you modify your code to allow this?
+To handle this, you can override the compareTo() method in the Disc class to reflect the new ordering rule.
+The modified implementation is available in the src/hust/soict/ite6/aims/Disc.java file.
