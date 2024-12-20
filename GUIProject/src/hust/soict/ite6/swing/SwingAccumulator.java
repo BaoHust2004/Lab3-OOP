@@ -8,8 +8,7 @@ public class SwingAccumulator extends JFrame{
 	private JTextField tfInput;
 	private JTextField tfOutput;
 	private int sum=0;		
-	
-	// Constructor to setup the GUI components and event handlers
+
 	public SwingAccumulator() {
 		Container cp = getContentPane();
 		cp.setLayout(new GridLayout(2,2));
@@ -30,6 +29,7 @@ public class SwingAccumulator extends JFrame{
 		setSize(350, 120);
 		setVisible(true);
 	}
+	
 	public static void main(String[] args) {
 		new SwingAccumulator();
 	}
