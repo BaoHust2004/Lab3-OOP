@@ -1,9 +1,11 @@
 package hust.soict.ite6.test.cart;
+import javax.naming.LimitExceededException;
+
 import hust.soict.ite6.aims.cart.Cart;
 import hust.soict.ite6.aims.media.DigitalVideoDisc;
 
 public class CartTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws LimitExceededException {
      
         Cart cart = new Cart();
         
